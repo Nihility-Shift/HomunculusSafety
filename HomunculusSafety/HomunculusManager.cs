@@ -36,7 +36,13 @@ namespace HomunculusSafety
             homunculus = null;
 
             //Create a new homunculus
-            HomunculusAndBiomassSocket socket = ClientGame.Current.PlayerShip.GetComponentInChildren<HomunculusAndBiomassSocket>();
+            HomunculusAndBiomassSocket socket = ClientGame.Current?.PlayerShip?.GameObject?.GetComponentInChildren<HomunculusAndBiomassSocket>();
+            if (socket == null)
+            {
+                StopTimer(null);
+                homunculus = null;
+                return;
+            }
             Tools.DelayDo(tryDispenseHomunculus, 1000); //For dramatic effect, delay not needed
 
             void tryDispenseHomunculus()
