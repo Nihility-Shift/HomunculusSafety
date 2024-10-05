@@ -10,7 +10,7 @@ namespace HomunculusSafety
         public const string PLUGIN_VERSION = "0.0.2";
         public const string PLUGIN_DESCRIPTION = "Recreates the homunculus if it gets lost. Host side.";
         public const string PLUGIN_ORIGINAL_AUTHOR = "18107";
-        public const string PLUGIN_AUTHORS = "18107";
+        public const string PLUGIN_AUTHORS = "18107, Dragon";
         public const string PLUGIN_THUNDERSTORE_ID = "VoidCrewModdingTeam/Homunculus_Safety";
     }
 }
