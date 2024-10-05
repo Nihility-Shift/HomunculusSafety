@@ -1,18 +1,18 @@
 [![](https://img.shields.io/badge/-Void_Crew_Modding_Team-111111?style=just-the-label&logo=github&labelColor=24292f)](https://github.com/Void-Crew-Modding-Team)
-![](https://img.shields.io/badge/Game%20Version-0.26.3-111111?style=flat&labelColor=24292f&color=111111)
+![](https://img.shields.io/badge/Game%20Version-0.27.0-111111?style=flat&labelColor=24292f&color=111111)
 [![](https://img.shields.io/discord/1180651062550593536.svg?&logo=discord&logoColor=ffffff&style=flat&label=Discord&labelColor=24292f&color=111111)](https://discord.gg/g2u5wpbMGu "Void Crew Modding Discord")
 
-# HomunculusSafety
+# Homunculus Safety
 
-Version 0.0.1  
-For Game Version 0.26.3  
+Version 0.0.2  
+For Game Version 0.27.0  
 Developed by 18107  
-Requires VoidManager 1.1.6
+Requires:  BepInEx-BepInExPack-5.4.2100, VoidCrewModdingTeam-VoidManager-1.2.2
 
 
 ---------------------
 
-### 💡 Function - Recreates the homunculus if it gets lost
+### 💡 Function(s)
 
 - Destroys the existing homunculus and creates a new one at the bioport if the homunculus is dropped/ejected and not picked up within 15 seconds.
 
@@ -23,7 +23,9 @@ Requires VoidManager 1.1.6
 ### 👥 Multiplayer Functionality
 
 - ✅ Host
-  - This affects all players if the host has the mod
+  - Only the host needs this mod.
+- ✅ Session
+  - Marks the room as Mod_Session when hosting.
 
 ---------------------
 
