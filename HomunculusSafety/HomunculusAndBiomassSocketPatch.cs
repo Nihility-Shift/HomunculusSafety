@@ -24,6 +24,13 @@ namespace HomunculusSafety
         {
             if (__instance.Payload == null) return;
             HomunculusManager.homunculus = __instance.Payload;
+            if (HomunculusManager.UrgencyMarker != null)
+            {
+                HomunculusManager.UrgencyMarker.isFollowingTransform = true;
+                HomunculusManager.UrgencyMarker.FollowTarget = HomunculusManager.GetUMT(HomunculusManager.homunculus).transform;
+                HomunculusManager.UrgencyMarker = null;
+            }
+
             HomunculusManager.homunculus.OnDropped += HomunculusManager.StartTimer;
             HomunculusManager.homunculus.OnCarried += HomunculusManager.StopTimer;
         }

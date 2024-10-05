@@ -3,6 +3,8 @@ using CG.Objects;
 using CG.Ship.Hull;
 using Gameplay.Carryables;
 using System;
+using System.Linq;
+using UI.ObjectMarker;
 using UnityEngine;
 using VoidManager.Utilities;
 
@@ -10,6 +12,7 @@ namespace HomunculusSafety
 {
     internal class HomunculusManager
     {
+        internal static ObjectMarkerData UrgencyMarker;
         internal static AbstractCarryableObject homunculus;
         private static float time = 0f;
         private const float homunculusTimeoutSeconds = 15f;
@@ -25,10 +28,23 @@ namespace HomunculusSafety
             VoidManager.Events.Instance.LateUpdate -= CheckTimer;
         }
 
+        internal static UrgencyMarkerTarget GetUMT(AbstractCarryableObject Homunculus)
+        {
+            return Homunculus.GetComponentInChildren<UrgencyMarkerTarget>();
+        }
+
         internal static void CheckTimer(object sender, EventArgs e)
         {
             if (time > Time.time) return;
             VoidManager.Events.Instance.LateUpdate -= CheckTimer;
+
+            //Find Urgency Marker targetting homumculus
+            UrgencyMarker = (ObjectMarkerData)ObjectMarkerViewer.Instance.visMarkers.Keys.FirstOrDefault(thing => thing is ObjectMarkerData && thing.FollowTarget == GetUMT(homunculus).transform);
+            if (UrgencyMarker != null)
+            {
+                UrgencyMarker.FollowTarget = null;
+                UrgencyMarker.isFollowingTransform = false;
+            }
 
             //Destroy the current homunculus
             Messaging.Echo("Homunculus lost", false);
@@ -49,6 +65,7 @@ namespace HomunculusSafety
             {
                 if (socket.Payload == null)
                 {
+                    socket.SwitchToHomunculusSocket();
                     socket.DispenseHomunculusNow();
                     Messaging.Echo("New Homunculus dispensed", false);
                 }
