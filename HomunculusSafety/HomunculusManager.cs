@@ -13,7 +13,7 @@ namespace HomunculusSafety
     internal class HomunculusManager
     {
         internal static ObjectMarkerData UrgencyMarker;
-        internal static AbstractCarryableObject homunculus;
+        internal static CarryableObject homunculus;
         private static float time = 0f;
         private const float homunculusTimeoutSeconds = 15f;
 
@@ -28,7 +28,7 @@ namespace HomunculusSafety
             VoidManager.Events.Instance.LateUpdate -= CheckTimer;
         }
 
-        internal static UrgencyMarkerTarget GetUMT(AbstractCarryableObject Homunculus)
+        internal static UrgencyMarkerTarget GetUMT(CarryableObject Homunculus)
         {
             return Homunculus.GetComponentInChildren<UrgencyMarkerTarget>();
         }
