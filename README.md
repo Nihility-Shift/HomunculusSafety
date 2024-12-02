@@ -1,13 +1,13 @@
 [![](https://img.shields.io/badge/-Void_Crew_Modding_Team-111111?style=just-the-label&logo=github&labelColor=24292f)](https://github.com/Void-Crew-Modding-Team)
-![](https://img.shields.io/badge/Game%20Version-0.27.0-111111?style=flat&labelColor=24292f&color=111111)
+![](https://img.shields.io/badge/Game%20Version-1.0.0-111111?style=flat&labelColor=24292f&color=111111)
 [![](https://img.shields.io/discord/1180651062550593536.svg?&logo=discord&logoColor=ffffff&style=flat&label=Discord&labelColor=24292f&color=111111)](https://discord.gg/g2u5wpbMGu "Void Crew Modding Discord")
 
 # Homunculus Safety
 
-Version 0.0.2  
-For Game Version 0.27.0  
+Version 0.0.3  
+For Game Version 1.0.0  
 Developed by 18107, Dragon  
-Requires:  BepInEx-BepInExPack-5.4.2100, VoidCrewModdingTeam-VoidManager-1.2.2
+Requires:  BepInEx-BepInExPack-5.4.2100, VoidCrewModdingTeam-VoidManager-1.2.4
 
 
 ---------------------
