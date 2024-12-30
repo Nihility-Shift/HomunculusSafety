@@ -21,7 +21,7 @@ namespace HomunculusSafety
             };
             VoidManager.Events.Instance.MasterClientSwitched += (player, e) =>
             {
-                if (PhotonNetwork.IsMasterClient)
+                if (PhotonNetwork.IsMasterClient && !GameSessionManager.InHub)
                 {
                     HomunculusManager.homunculus = null;
 
