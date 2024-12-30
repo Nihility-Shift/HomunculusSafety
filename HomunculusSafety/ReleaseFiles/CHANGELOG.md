@@ -1,3 +1,6 @@
+## 0.0.4
+- Fixed exception on host swap in hub.
+
 ## 0.0.3
 - Updated for Void Crew 1.0.0.
 

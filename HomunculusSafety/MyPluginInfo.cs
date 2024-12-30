@@ -7,7 +7,7 @@ namespace HomunculusSafety
         public const string PLUGIN_GUID = $"{PLUGIN_ORIGINAL_AUTHOR}.{PLUGIN_NAME}";
         public const string PLUGIN_NAME = "HomunculusSafety";
         public const string USERS_PLUGIN_NAME = "Homunculus Safety";
-        public const string PLUGIN_VERSION = "0.0.3";
+        public const string PLUGIN_VERSION = "0.0.4";
         public const string PLUGIN_DESCRIPTION = "Recreates the homunculus if it gets lost.";
         public const string PLUGIN_ORIGINAL_AUTHOR = "18107";
         public const string PLUGIN_AUTHORS = "18107, Dragon";
